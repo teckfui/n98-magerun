@@ -283,7 +283,7 @@ class ConfigurationLoader
     }
 
     /**
-     * MAGENTO_ROOT/app/etc/n98-magerun.yaml
+     * MAGENTO_ROOT/etc/n98-magerun.yaml
      *
      * @param string $magentoRootFolder
      * @param string $magerunStopFileFolder

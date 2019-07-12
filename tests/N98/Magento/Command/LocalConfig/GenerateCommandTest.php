@@ -29,7 +29,7 @@ class GenerateCommandTest extends TestCase
         $this->getApplication()->add($commandMock);
 
         copy(
-            sprintf('%s/app/etc/local.xml.template', $this->getTestMagentoRoot()),
+            sprintf('%s/etc/local.xml.template', $this->getTestMagentoRoot()),
             sprintf('%s/local.xml.template', dirname($this->configFile))
         );
     }
@@ -55,7 +55,7 @@ class GenerateCommandTest extends TestCase
 
         $this->assertFileExists($this->configFile);
         $this->assertContains(
-            sprintf('local.xml file already exists in folder "%s/app/etc"', dirname($this->configFile)),
+            sprintf('local.xml file already exists in folder "%s/etc"', dirname($this->configFile)),
             $commandTester->getDisplay()
         );
     }

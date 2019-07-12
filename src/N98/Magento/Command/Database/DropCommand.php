@@ -20,7 +20,7 @@ class DropCommand extends AbstractDatabaseCommand
         $help = <<<HELP
 The command prompts before dropping the database. If --force option is specified it
 directly drops the database.
-The configured user in app/etc/local.xml must have "DROP" privileges.
+The configured user in etc/local.xml must have "DROP" privileges.
 HELP;
         $this->setHelp($help);
     }

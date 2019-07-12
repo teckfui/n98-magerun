@@ -19,7 +19,7 @@ class LocalConfigAccessableCheck implements SimpleCheck
     public function check(ResultCollection $results)
     {
         $result = $results->createResult();
-        $filePath = 'app/etc/local.xml';
+        $filePath = 'etc/local.xml';
         $defaultUnsecureBaseURL = (string) \Mage::getConfig()->getNode(
             'default/' . \Mage_Core_Model_Store::XML_PATH_UNSECURE_BASE_URL
         );

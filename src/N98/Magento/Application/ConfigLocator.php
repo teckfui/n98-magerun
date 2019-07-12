@@ -67,7 +67,7 @@ class ConfigLocator
     }
 
     /**
-     * Obtain the project-config-file, it is placed in the magento app/etc dir, e.g. app/etc/n98-magerun2.yaml
+     * Obtain the project-config-file, it is placed in the magento etc dir, e.g. etc/n98-magerun2.yaml
      *
      * @return ConfigFile|null
      */
@@ -76,7 +76,7 @@ class ConfigLocator
         if (!strlen($this->magentoRootFolder)) {
             return;
         }
-        $projectConfigFilePath = $this->magentoRootFolder . '/app/etc/' . $this->customConfigFilename;
+        $projectConfigFilePath = $this->magentoRootFolder . '/etc/' . $this->customConfigFilename;
         if (!is_readable($projectConfigFilePath)) {
             return;
         }

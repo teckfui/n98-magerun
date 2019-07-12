@@ -25,11 +25,11 @@ class GenerateCommand extends AbstractMagentoCommand
         ;
 
         $help = <<<HELP
-Generates the app/etc/local.xml.
+Generates the etc/local.xml.
 
-- The file "app/etc/local.xml.template" (bundles with Magento) must exist!
+- The file "etc/local.xml.template" (bundles with Magento) must exist!
 - Currently the command does not validate anything you enter.
-- The command will not overwrite existing app/etc/local.xml files.
+- The command will not overwrite existing etc/local.xml files.
 HELP;
         $this->setHelp($help);
     }
@@ -48,7 +48,7 @@ HELP;
 
         if (file_exists($configFile)) {
             $output->writeln(
-                sprintf('<info>local.xml file already exists in folder "%s/app/etc"</info>', dirname($configFile))
+                sprintf('<info>local.xml file already exists in folder "%s/etc"</info>', dirname($configFile))
             );
             return;
         }
@@ -142,7 +142,7 @@ HELP;
      */
     protected function _getLocalConfigFilename()
     {
-        $configFile = $this->_magentoRootFolder . '/app/etc/local.xml';
+        $configFile = $this->_magentoRootFolder . '/etc/local.xml';
         return $configFile;
     }
 

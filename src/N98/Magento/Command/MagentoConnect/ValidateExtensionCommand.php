@@ -145,18 +145,18 @@ HELP;
     protected function _getBasePathFromTargetName($targetName)
     {
         $paths = array(
-            'mageetc'       => 'app/etc',
-            'magecommunity' => 'app/code/community',
-            'magedesign'    => 'app/design',
-            'magelocale'    => 'app/locale',
-            'magelocal'     => 'app/code/local',
-            'magecore'      => 'app/code/core',
-            'magelib'       => 'lib',
+            'mageetc'       => 'etc',
+            'magecommunity' => '../../magento/app/code/community',
+            'magedesign'    => 'design',
+            'magelocale'    => '../../magento/app/locale',
+            'magelocal'     => '../../magento/app/code/local',
+            'magecore'      => '../../magento/app/code/core',
+            'magelib'       => '../../magento/lib',
             'magemedia'     => 'media',
             'mageskin'      => 'skin',
-            'mageweb'       => '.',
-            'magetest'      => 'tests',
-            'mage'          => '.',
+            'mageweb'       => '../../magento/.',
+            'magetest'      => '../../magento/tests',
+            'mage'          => '../../magento/.',
         );
 
         return $paths[$targetName];

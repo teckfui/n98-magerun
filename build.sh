@@ -30,7 +30,7 @@ exit_trap() {
   echo "exit ($status)."
 }
 
-name="$(awk '/<project name="([^"]*)"/ && !done {print gensub(/<project name="([^"]*)".*/, "\\1", "g"); done=1}' build.xml)"
+name="$(gawk '/<project name="([^"]*)"/ && !done {print gensub(/<project name="([^"]*)".*/, "\\1", "g"); done=1}' build.xml)"
 nice_name="$(php -r "echo str_replace(' ', '', ucwords(strtr('${name}', '-', ' ')));")"
 phar="${name}.phar"
 echo "Building ${phar}..."

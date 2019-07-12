@@ -152,7 +152,7 @@ class CreateCommand extends AbstractMagentoCommand
             }
             mkdir($modManDir, 0777, true);
             $this->_magentoRootFolder = './' . $modManDir;
-            mkdir($this->_magentoRootFolder . '/app/etc/modules', 0777, true);
+            mkdir($this->_magentoRootFolder . '/etc/modules', 0777, true);
         }
         $moduleDir = sprintf(
             '%s/app/code/%s/%s/%s',
@@ -219,7 +219,7 @@ class CreateCommand extends AbstractMagentoCommand
     protected function writeEtcModules(OutputInterface $output)
     {
         $outFile = sprintf(
-            '%s/app/etc/modules/%s_%s.xml',
+            '%s/etc/modules/%s_%s.xml',
             $this->_magentoRootFolder,
             $this->vendorNamespace,
             $this->moduleName

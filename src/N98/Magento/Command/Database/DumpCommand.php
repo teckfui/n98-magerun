@@ -138,7 +138,7 @@ the MySQL client tools.
 
 On debian systems run `apt-get install mysql-client` to do that.
 
-The command reads app/etc/local.xml to find the correct settings.
+The command reads etc/local.xml to find the correct settings.
 
 See it in action: http://youtu.be/ttjZHY6vThs
 

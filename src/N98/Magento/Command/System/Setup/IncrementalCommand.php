@@ -92,7 +92,7 @@ class IncrementalCommand extends AbstractMagentoCommand
     protected function _loadSecondConfig()
     {
         $config = new \Mage_Core_Model_Config;
-        $config->loadBase(); //get app/etc
+        $config->loadBase(); //get /etc
         $this->_secondConfig = \Mage::getConfig()->loadModulesConfiguration('config.xml', $config);
     }
 

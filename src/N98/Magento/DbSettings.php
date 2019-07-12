@@ -42,7 +42,7 @@ class DbSettings implements ArrayAccess, IteratorAggregate
     private $connectionNode = 'default_setup';
 
     /**
-     * @param string $file path to app/etc/local.xml
+     * @param string $file path to etc/local.xml
      * @param null $connectionNode
      */
     public function __construct($file, $connectionNode = null)
@@ -54,7 +54,7 @@ class DbSettings implements ArrayAccess, IteratorAggregate
     }
 
     /**
-     * @param string $file path to app/etc/local.xml
+     * @param string $file path to etc/local.xml
      *
      * @throws InvalidArgumentException if the file is invalid
      */
@@ -62,7 +62,7 @@ class DbSettings implements ArrayAccess, IteratorAggregate
     {
         if (!is_readable($file)) {
             throw new InvalidArgumentException(
-                sprintf('"app/etc/local.xml"-file %s is not readable', var_export($file, true))
+                sprintf('"etc/local.xml"-file %s is not readable', var_export($file, true))
             );
         }
 
@@ -72,20 +72,20 @@ class DbSettings implements ArrayAccess, IteratorAggregate
 
         if (false === $config) {
             throw new InvalidArgumentException(
-                sprintf('Unable to open "app/etc/local.xml"-file %s and parse it as XML', var_export($file, true))
+                sprintf('Unable to open "etc/local.xml"-file %s and parse it as XML', var_export($file, true))
             );
         }
 
         $resources = $config->global->resources;
         if (!$resources) {
-            throw new InvalidArgumentException('DB global resources was not found in "app/etc/local.xml"-file');
+            throw new InvalidArgumentException('DB global resources was not found in "etc/local.xml"-file');
         }
 
         $connectionNode = $this->connectionNode;
         if (!$resources->$connectionNode->connection) {
             throw new InvalidArgumentException(
                 sprintf(
-                    'DB settings (%s) was not found in "app/etc/local.xml"-file',
+                    'DB settings (%s) was not found in "etc/local.xml"-file',
                     $connectionNode
                 )
             );

@@ -13,7 +13,7 @@ source ./shared/build/sh/setup.sh
 # whether or not magento is already installed, normally a quick-check based on file existence.
 magento_is_installed() {
     local directory="${test_setup_directory}"
-    local magento_local_xml="${directory}/app/etc/local.xml"
+    local magento_local_xml="${directory}/etc/local.xml"
 
     if [ -e  "${magento_local_xml}" ]; then
         return 0

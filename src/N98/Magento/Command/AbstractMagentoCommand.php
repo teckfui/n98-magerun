@@ -518,7 +518,7 @@ abstract class AbstractMagentoCommand extends Command
                     );
                 }
 
-                $localXml = $folderName . '/app/etc/local.xml';
+                $localXml = $folderName . '/etc/local.xml';
                 if (file_exists($localXml)) {
                     throw new InvalidArgumentException(
                         sprintf(

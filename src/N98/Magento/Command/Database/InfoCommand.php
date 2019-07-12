@@ -29,7 +29,7 @@ class InfoCommand extends AbstractDatabaseCommand
         $this->addDeprecatedAlias('database:info', 'Please use db:info');
 
         $help = <<<HELP
-This command is useful to print all informations about the current configured database in app/etc/local.xml.
+This command is useful to print all informations about the current configured database in etc/local.xml.
 It can print connection string for JDBC, PDO connections.
 HELP;
         $this->setHelp($help);

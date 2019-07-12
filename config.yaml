@@ -690,7 +690,7 @@ commands:
         var/session: "Used as file based session save"
 
       files:
-        app/etc/local.xml: "Magento local configuration."
+        etc/local.xml: "Magento local configuration."
         index.php.sample: "Used to generate staging websites in Magento enterprise edition"
 
     php:
